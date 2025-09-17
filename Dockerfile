@@ -1,5 +1,5 @@
 # Start with the official Golang image
-FROM golang:1.23-alpine
+FROM golang:1.24-alpine
 
 # Set environment variables
 ENV GO111MODULE=on
@@ -18,7 +18,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go app
-RUN go build -o main .
+RUN go build -o main ./cmd/oms/main.go
 
 # Expose the port your app will run on
 EXPOSE 8080
