@@ -38,6 +38,7 @@ Not done because i got very little time (1 day only)
 - [ ] Transactions for every db action to rollback on failure
 - [ ] Event store , so each order have a visual timeline and we know every thing happened when and by who
 - [ ] User and authentication
+- [ ] Reports for the admin
 
 ### Events timeline sample
 
