@@ -1,4 +1,4 @@
-module event-driven-webhook
+module oms-services
 
 go 1.23.2
 
