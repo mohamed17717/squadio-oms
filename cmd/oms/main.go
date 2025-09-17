@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"oms-services/api"
 	"oms-services/config"
 	"oms-services/models"
 
@@ -23,13 +24,11 @@ func main() {
 		log.Fatal("Index creation failed:", err)
 	}
 
-	// apis.AuthRoutes()
-	// apis.ActionRoutes()
-	// apis.SubscriberRoutes()
-	// apis.UserConfigurationRoutes()
-	// apis.WebhookLogRoutes()
-	// apis.SubscriberActionRoutes()
-	// apis.ChangeRoutes()
+	// Register API routes
+	api.RegisterHealthRoutes()
+	api.RegisterCatalogRoutes()
+	api.RegisterOrderRoutes()
+
 	// Start the Gin server
 	gin.SetMode(gin.DebugMode)
 	config.Server.Run()
