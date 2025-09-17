@@ -19,12 +19,15 @@ help:
 # Build the application
 build:
 	@echo "Building application..."
-	go build -o bin/server cmd/server/main.go
+	go build -o bin/server cmd/oms/main.go
 
 # Run the application locally
 run:
 	@echo "Running application..."
-	go run cmd/server/main.go
+	docker-compose up -d --build
+
+# go run cmd/oms/main.go
+
 
 # Run unit tests
 test:
