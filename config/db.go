@@ -11,7 +11,7 @@ import (
 
 var DB *gorm.DB
 
-func ConnectDatabase() {
+func ConnectDatabase() *gorm.DB {
 	var err error
 
 	databaseUrl := os.Getenv("DATABASE_URL")
@@ -22,4 +22,5 @@ func ConnectDatabase() {
 	DB, err = gorm.Open(postgres.Open(databaseUrl), &gorm.Config{})
 	utils.FailOnError(err, "Cannot connect to database")
 
+	return DB
 }
