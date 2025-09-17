@@ -42,7 +42,7 @@ Not done because i got very little time (1 day only)
 
 ### Events timeline sample
 
-```
+
 Events with payload
 
 •	order_created → { "customer_id": "...", "currency":"EGP" }
@@ -55,5 +55,3 @@ Events with payload
 •	payment_captured → { "payment_id":"...","amount_minor":2900 }
 •	shipment_created → { "shipment_id":"...","carrier":"DHL","tracking":"XYZ" }
 •	refund_processed → { "refund_id":"...","amount_minor":1000,"reason":"partial_return" }
-•	note_added (اختياري لسبورت) → { "message":"customer asked to change address" }
-```
