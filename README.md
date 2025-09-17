@@ -2,7 +2,7 @@
 
 Create Order management system with catalog and basic operation for the orders
 
-API endpoint here https://.postman.co/workspace/My-Workspace~742ac3e4-1d11-4f96-8cb3-3f1da014b6e6/collection/42564191-13b670f5-e6e0-4de8-967c-06c0535f777c?action=share&creator=42564191
+Postman API endpoint : [https://.postman.co/workspace/My-Workspace~742ac3e4-1d11-4f96-8cb3-3f1da014b6e6/collection/42564191-13b670f5-e6e0-4de8-967c-06c0535f777c?action=share&creator=42564191](https://.postman.co/workspace/My-Workspace~742ac3e4-1d11-4f96-8cb3-3f1da014b6e6/collection/42564191-13b670f5-e6e0-4de8-967c-06c0535f777c?action=share&creator=42564191)
 
 ## Database Design
 ![Untitled (1).png](db.png)
