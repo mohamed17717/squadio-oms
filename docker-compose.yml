@@ -1,0 +1,37 @@
+services:
+  oms-services:
+    build: .
+    container_name: oms-services
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: squadio
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/squadio?sslmode=disable
+      JWT_SECRET: myJWTSecretIsSuperHard
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: squadio
+    ports:
+      - "5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+volumes:
+  postgres-data:
+
+networks:
+  app-network:
+    driver: bridge
